@@ -22,11 +22,11 @@ const imagemBotaoTrocaDeTema = document.querySelector(".imagem-botao")
 botaoAlterarTema.addEventListener("click", () =>{
     console.log("clicou no botão");
 
-    body.classList.toggle("modo-escuro");
-
     if(body.classList.contains("modo-escuro")){
+        body.classList.remove("modo-escuro");
         imagemBotaoTrocaDeTema.setAttribute("src", "./src/imagens/sun.png");
     }else{
+        body.classList.add("modo-escuro");
         imagemBotaoTrocaDeTema.setAttribute("src", "./src/imagens/moon.png");
     }
 })
